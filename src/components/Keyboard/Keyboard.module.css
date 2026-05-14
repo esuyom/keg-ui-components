@@ -1,0 +1,20 @@
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  padding: var(--spacing-12);
+  border-radius: var(--radius-lg);
+  background: var(--color-primitive-gray-200);
+  font-family: var(--font-family-base);
+}
+
+.key {
+  min-height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-semantic-text-primary);
+  font-size: var(--typography-13-semibold-font-size);
+  font-weight: var(--typography-13-semibold-font-weight);
+  box-shadow: 0 1px 0 var(--color-primitive-alpha-black-200);
+}

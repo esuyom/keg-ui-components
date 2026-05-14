@@ -1,0 +1,40 @@
+.agreementItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+  min-height: 44px;
+  font-family: var(--font-family-base);
+  color: var(--color-semantic-text-primary);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1 1 auto;
+  font-size: var(--typography-14-medium-font-size);
+  font-weight: var(--typography-14-medium-font-weight);
+  line-height: var(--typography-14-medium-line-height);
+}
+
+.optional {
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-12-medium-font-size);
+  font-weight: var(--typography-12-medium-font-weight);
+}
+
+.detailButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  color: var(--color-semantic-icon-secondary);
+}
+
+.detailButton:hover {
+  background: var(--color-primitive-alpha-black-50);
+}

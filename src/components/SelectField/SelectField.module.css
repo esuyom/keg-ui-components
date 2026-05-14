@@ -1,0 +1,83 @@
+.selectField {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  font-family: var(--font-family-base);
+}
+
+.label {
+  font-size: var(--typography-13-semibold-font-size);
+  font-weight: var(--typography-13-semibold-font-weight);
+  line-height: var(--typography-13-semibold-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-8);
+  width: 100%;
+  min-height: 48px;
+  padding: 0 var(--spacing-16);
+  border: 1px solid var(--color-semantic-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-semantic-text-primary);
+  text-align: left;
+}
+
+.trigger:focus-visible {
+  outline: 3px solid var(--color-semantic-focus-ring-primary);
+  outline-offset: 2px;
+}
+
+.open .trigger {
+  border-color: var(--color-semantic-border-focus);
+}
+
+.open .trigger svg {
+  transform: rotate(180deg);
+}
+
+.value {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--typography-15-medium-font-size);
+  font-weight: var(--typography-15-medium-font-weight);
+  line-height: var(--typography-15-medium-line-height);
+}
+
+.placeholder .value {
+  color: var(--color-semantic-text-tertiary);
+}
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  padding: var(--spacing-8);
+  border: 1px solid var(--color-semantic-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: 0 10px 24px rgba(16, 21, 34, 0.12);
+}
+
+.helper {
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-12-medium-font-size);
+  font-weight: var(--typography-12-medium-font-weight);
+  line-height: var(--typography-12-medium-line-height);
+}
+
+.disabled .trigger {
+  cursor: not-allowed;
+  color: var(--color-semantic-text-disabled);
+  background: var(--color-primitive-gray-50);
+}

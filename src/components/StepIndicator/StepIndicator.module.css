@@ -1,0 +1,29 @@
+.stepIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-gray-300);
+}
+
+.size-sm .dot {
+  width: 6px;
+  height: 6px;
+}
+
+.size-md .dot {
+  width: 8px;
+  height: 8px;
+}
+
+.active {
+  width: 18px;
+  background: var(--color-primitive-primary-500);
+}
+
+.custom {
+  display: flex;
+}

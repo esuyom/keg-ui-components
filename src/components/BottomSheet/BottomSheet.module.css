@@ -1,0 +1,77 @@
+.bottomSheetRoot {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  background: transparent;
+  isolation: isolate;
+}
+
+.overlay {
+  z-index: 0;
+}
+
+.sheet {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  width: 100%;
+  padding: var(--spacing-8) var(--spacing-20) var(--spacing-24);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: var(--color-white);
+  font-family: var(--font-family-base);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.handle {
+  width: 36px;
+  height: 4px;
+  margin: 0 auto var(--spacing-8);
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-gray-300);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.title {
+  color: var(--color-primitive-gray-600);
+  font-size: var(--typography-18-bold-font-size);
+  font-weight: var(--typography-18-bold-font-weight);
+  line-height: var(--typography-18-bold-line-height);
+}
+
+.description {
+  color: var(--color-primitive-gray-500);
+  font-size: var(--typography-15-regular-font-size);
+  font-weight: var(--typography-15-regular-font-weight);
+  line-height: var(--typography-15-regular-line-height);
+}
+
+.customContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  width: 100%;
+  margin-top: var(--spacing-8);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.vertical {
+  flex-direction: column-reverse;
+}
+
+.horizontal {
+  flex-direction: row;
+}

@@ -1,0 +1,78 @@
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 280px;
+  border-radius: var(--radius-sm);
+  background: var(--color-semantic-surface-overlay);
+  color: var(--color-white);
+  font-family: var(--font-family-base);
+}
+
+.size-sm {
+  padding: 6px 10px;
+  font-size: var(--typography-12-semibold-font-size);
+  font-weight: var(--typography-12-semibold-font-weight);
+  line-height: var(--typography-12-semibold-line-height);
+}
+
+.size-md {
+  padding: var(--spacing-8) var(--spacing-12);
+  font-size: var(--typography-13-semibold-font-size);
+  font-weight: var(--typography-13-semibold-font-weight);
+  line-height: var(--typography-13-semibold-line-height);
+}
+
+.message {
+  white-space: normal;
+}
+
+.arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.bottom .arrow {
+  bottom: -4px;
+}
+
+.top .arrow {
+  top: -4px;
+}
+
+.left .arrow {
+  left: -4px;
+}
+
+.right .arrow {
+  right: -4px;
+}
+
+.alignStart .arrow {
+  left: 14px;
+}
+
+.alignCenter .arrow {
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.alignEnd .arrow {
+  right: 14px;
+}
+
+.left.alignCenter .arrow,
+.right.alignCenter .arrow {
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.alignCustom .arrow {
+  display: none;
+}

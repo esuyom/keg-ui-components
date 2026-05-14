@@ -1,0 +1,101 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  box-sizing: border-box;
+  border: 1px solid var(--color-primitive-gray-300);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-primitive-gray-400);
+  font-family: var(--font-family-base);
+  font-weight: var(--typography-12-medium-font-weight);
+  cursor: pointer;
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--color-semantic-focus-ring-primary);
+  outline-offset: 2px;
+}
+
+.size-sm {
+  min-width: 53px;
+  min-height: 26px;
+  gap: 2px;
+  padding: 4px 12px;
+  font-size: var(--typography-12-medium-font-size);
+  line-height: var(--typography-12-medium-line-height);
+}
+
+.size-md {
+  min-width: 72px;
+  min-height: 35px;
+  gap: 4px;
+  padding: 6px 18px;
+  font-size: var(--typography-16-medium-font-size);
+  line-height: var(--typography-16-medium-line-height);
+}
+
+.selected {
+  border-color: transparent;
+  background: var(--color-primitive-primary-500);
+  color: var(--color-white);
+  font-weight: var(--typography-12-bold-font-weight);
+}
+
+.size-md.selected {
+  font-weight: var(--typography-16-bold-font-weight);
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.default.disabled {
+  border-color: var(--color-primitive-gray-300);
+  color: var(--color-primitive-gray-300);
+  background: transparent;
+}
+
+.size-md.default.disabled {
+  border-width: 1.5px;
+}
+
+.selected.disabled {
+  background: var(--color-primitive-gray-300);
+  color: var(--color-primitive-gray-400);
+  font-weight: var(--typography-12-semibold-font-weight);
+}
+
+.size-md.selected.disabled {
+  font-weight: var(--typography-16-semibold-font-weight);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.size-sm .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.size-md .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
+}

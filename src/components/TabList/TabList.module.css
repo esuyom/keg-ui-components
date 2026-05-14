@@ -1,0 +1,70 @@
+.tabList {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--color-semantic-border-default);
+  font-family: var(--font-family-base);
+}
+
+.tab {
+  position: relative;
+  min-height: 44px;
+  padding: 0 var(--spacing-16);
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-14-semibold-font-size);
+  font-weight: var(--typography-14-semibold-font-weight);
+  line-height: var(--typography-14-semibold-line-height);
+  white-space: nowrap;
+}
+
+.tab:disabled {
+  color: var(--color-semantic-text-disabled);
+  cursor: not-allowed;
+}
+
+.equal .tab {
+  flex: 1 1 0;
+}
+
+.fixed .tab {
+  flex: 0 0 auto;
+}
+
+.selected {
+  color: var(--color-primitive-primary-500);
+}
+
+.selected::after {
+  content: '';
+  position: absolute;
+  left: var(--spacing-16);
+  right: var(--spacing-16);
+  bottom: 0;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-primary-500);
+}
+
+.leadingHint::before,
+.trailingHint::after {
+  content: '';
+  position: sticky;
+  z-index: 1;
+  width: 24px;
+  height: 44px;
+  flex: 0 0 24px;
+  pointer-events: none;
+}
+
+.leadingHint::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-white), var(--color-white_a0));
+}
+
+.trailingHint::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-white), var(--color-white_a0));
+}

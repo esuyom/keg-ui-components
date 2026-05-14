@@ -1,0 +1,26 @@
+.progressBar {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-gray-100);
+}
+
+.size-sm {
+  height: 4px;
+}
+
+.size-md {
+  height: 8px;
+}
+
+.size-lg {
+  height: 12px;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primitive-primary-500);
+  transition: width 0.2s ease;
+}

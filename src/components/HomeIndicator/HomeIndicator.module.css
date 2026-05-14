@@ -1,0 +1,21 @@
+.homeIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+}
+
+.homeIndicator span {
+  width: 134px;
+  height: 5px;
+  border-radius: var(--radius-full);
+}
+
+.light span {
+  background: var(--color-black);
+}
+
+.dark span {
+  background: var(--color-white);
+}

@@ -1,0 +1,80 @@
+.cardSlot {
+  width: min(100%, 375px);
+  box-sizing: border-box;
+  padding-inline: 22px;
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  font-family: var(--font-family-base);
+}
+
+.slot,
+.slotGroup {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.slot {
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
+  min-width: 1px;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid var(--color-primitive-alpha-black-50);
+}
+
+.slotGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  background: transparent;
+}
+
+.size-sm.single .slot {
+  min-height: 60px;
+  max-height: 99px;
+  border-radius: var(--radius-md);
+}
+
+.size-sm.multiple .slot {
+  min-height: 50px;
+  max-height: 99px;
+  border-radius: var(--radius-md);
+}
+
+.size-md .slot {
+  min-height: 100px;
+  max-height: 199px;
+  border-radius: var(--radius-lg);
+}
+
+.size-lg .slot {
+  min-height: 200px;
+  border-radius: 18px;
+}
+
+.hasPadding.size-sm .slot {
+  padding: var(--spacing-12);
+}
+
+.hasPadding.size-md .slot {
+  padding: var(--spacing-16);
+}
+
+.hasPadding.size-lg .slot {
+  padding: var(--spacing-20);
+}
+
+.noPadding .slot {
+  padding: 0;
+}
+
+.shadow .slot {
+  /* TODO: tokens.css에 shadow 토큰이 없어 Figma CardSlot의 Shadow/sm 값을 직접 사용해요. */
+  box-shadow: 0 4px 18px var(--color-primitive-alpha-black-50);
+}
+
+.noShadow .slot {
+  box-shadow: none;
+}

@@ -1,0 +1,45 @@
+.topHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-16);
+  width: 100%;
+  font-family: var(--font-family-base);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  min-width: 0;
+}
+
+.resource {
+  display: inline-flex;
+}
+
+.title {
+  color: var(--color-semantic-text-primary);
+  font-weight: var(--typography-20-bold-font-weight);
+}
+
+.size-lg .title {
+  font-size: var(--typography-24-bold-font-size);
+  line-height: var(--typography-24-bold-line-height);
+}
+
+.size-md .title {
+  font-size: var(--typography-20-bold-font-size);
+  line-height: var(--typography-20-bold-line-height);
+}
+
+.subtitle {
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--typography-14-medium-font-size);
+  font-weight: var(--typography-14-medium-font-weight);
+  line-height: var(--typography-14-medium-line-height);
+}
+
+.action {
+  flex-shrink: 0;
+}

@@ -1,0 +1,77 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  font-weight: var(--typography-12-bold-font-weight);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.size-md {
+  min-width: 42px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: var(--typography-12-bold-font-size);
+  line-height: var(--typography-12-bold-line-height);
+}
+
+.size-sm {
+  min-width: 34px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--typography-10-bold-font-size);
+  line-height: var(--typography-10-bold-line-height);
+}
+
+.emphasis-solid.color-primary {
+  background: var(--color-semantic-badge-primary-solid-bg);
+  color: var(--color-semantic-badge-primary-solid-text);
+}
+
+.emphasis-soft.color-primary {
+  background: var(--color-semantic-badge-primary-soft-bg);
+  color: var(--color-semantic-badge-primary-soft-text);
+}
+
+.emphasis-solid.color-green {
+  background: var(--color-semantic-badge-green-solid-bg);
+  color: var(--color-semantic-badge-green-solid-text);
+}
+
+.emphasis-soft.color-green {
+  background: var(--color-semantic-badge-green-soft-bg);
+  color: var(--color-semantic-badge-green-soft-text);
+}
+
+.emphasis-solid.color-yellow {
+  background: var(--color-semantic-badge-yellow-solid-bg);
+  color: var(--color-semantic-badge-yellow-solid-text);
+}
+
+.emphasis-soft.color-yellow {
+  background: var(--color-semantic-badge-yellow-soft-bg);
+  color: var(--color-semantic-badge-yellow-soft-text);
+}
+
+.emphasis-solid.color-red {
+  background: var(--color-semantic-badge-red-solid-bg);
+  color: var(--color-semantic-badge-red-solid-text);
+}
+
+.emphasis-soft.color-red {
+  background: var(--color-semantic-badge-red-soft-bg);
+  color: var(--color-semantic-badge-red-soft-text);
+}
+
+.emphasis-solid.color-gray {
+  background: var(--color-semantic-badge-gray-solid-bg);
+  color: var(--color-semantic-badge-gray-solid-text);
+}
+
+.emphasis-soft.color-gray {
+  background: var(--color-semantic-badge-gray-soft-bg);
+  color: var(--color-semantic-badge-gray-soft-text);
+}

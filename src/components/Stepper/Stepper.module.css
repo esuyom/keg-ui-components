@@ -1,0 +1,66 @@
+.stepper {
+  display: flex;
+  gap: var(--spacing-16);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family-base);
+  list-style: none;
+}
+
+.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+  color: var(--color-semantic-text-tertiary);
+}
+
+.marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-gray-100);
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-12-bold-font-size);
+  font-weight: var(--typography-12-bold-font-weight);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: var(--typography-13-semibold-font-size);
+  font-weight: var(--typography-13-semibold-font-weight);
+  line-height: var(--typography-13-semibold-line-height);
+}
+
+.description {
+  font-size: var(--typography-12-medium-font-size);
+  font-weight: var(--typography-12-medium-font-weight);
+  line-height: var(--typography-12-medium-line-height);
+}
+
+.active,
+.complete {
+  color: var(--color-primitive-primary-500);
+}
+
+.active .marker,
+.complete .marker {
+  background: var(--color-primitive-primary-500);
+  color: var(--color-white);
+}

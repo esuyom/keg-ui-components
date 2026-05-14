@@ -1,0 +1,62 @@
+.navBar {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+  min-height: 56px;
+  padding: 0 var(--spacing-16);
+  color: var(--color-semantic-text-primary);
+  font-family: var(--font-family-base);
+}
+
+.background {
+  background: var(--color-white);
+}
+
+.leftSlot,
+.rightSlot {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  color: var(--color-semantic-icon-primary);
+}
+
+.leftSlot {
+  justify-content: flex-start;
+}
+
+.rightSlot {
+  justify-content: flex-end;
+}
+
+.centerSlot {
+  min-width: 0;
+}
+
+.title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--typography-18-bold-font-size);
+  font-weight: var(--typography-18-bold-font-weight);
+  line-height: var(--typography-18-bold-line-height);
+}
+
+.titleCenter .centerSlot {
+  text-align: center;
+}
+
+.titleLeft .centerSlot,
+.logo .centerSlot {
+  text-align: left;
+}
+
+.logo .title {
+  color: var(--color-primitive-primary-500);
+}
+
+.search {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}

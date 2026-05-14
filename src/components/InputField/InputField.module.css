@@ -1,0 +1,200 @@
+.inputField {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-base);
+  color: var(--color-semantic-text-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+  padding: 0 4px 8px;
+  box-sizing: border-box;
+}
+
+.labelText {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  color: var(--color-primitive-gray-400);
+  font-size: var(--typography-12-medium-font-size);
+  font-weight: var(--typography-12-medium-font-weight);
+  line-height: var(--typography-12-medium-line-height);
+  white-space: nowrap;
+}
+
+.requiredMark {
+  color: var(--color-primitive-red-600);
+}
+
+.supportingText {
+  color: var(--color-primitive-gray-400);
+  font-size: var(--typography-12-regular-font-size);
+  font-weight: var(--typography-12-regular-font-weight);
+  line-height: var(--typography-12-regular-line-height);
+  white-space: nowrap;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  gap: 10px;
+  padding: 16px 12px;
+  border: 1px solid var(--color-primitive-alpha-black-50);
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-primary);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.md .control {
+  min-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lg .control {
+  min-height: 48px;
+}
+
+.input {
+  flex: 1 1 0;
+  width: 100%;
+  min-width: 0;
+  padding: 0 0 0 4px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-primitive-gray-600);
+  font-family: var(--font-family-base);
+  font-size: var(--typography-18-regular-font-size);
+  font-weight: var(--typography-18-regular-font-weight);
+  line-height: var(--typography-18-regular-line-height);
+}
+
+.input::placeholder {
+  color: var(--color-primitive-gray-300);
+  opacity: 1;
+}
+
+.prefixSlot,
+.trailingSlot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-semantic-icon-secondary);
+}
+
+.suffixText {
+  flex-shrink: 0;
+  padding-right: 4px;
+  color: var(--color-primitive-gray-600);
+  font-size: var(--typography-18-regular-font-size);
+  font-weight: var(--typography-18-regular-font-weight);
+  line-height: var(--typography-18-regular-line-height);
+  white-space: nowrap;
+}
+
+.message {
+  display: block;
+  min-height: 18px;
+  padding: 4px 4px 0;
+  box-sizing: border-box;
+  font-size: var(--typography-12-regular-font-size);
+  font-weight: var(--typography-12-regular-font-weight);
+  line-height: var(--typography-12-regular-line-height);
+}
+
+.hintGray {
+  color: var(--color-primitive-gray-500);
+}
+
+.hintNavy {
+  color: var(--color-primitive-primary-500);
+}
+
+.hintRed,
+.errorMessage {
+  color: var(--color-primitive-red-700);
+}
+
+.control:focus-within,
+.focused .control {
+  border-width: 2px;
+  border-color: var(--color-primitive-primary-400);
+  box-shadow: 0 4px 15px var(--color-semantic-focus-ring-primary);
+}
+
+.control:focus-within .labelText,
+.focused .labelText {
+  color: var(--color-primitive-primary-400);
+}
+
+.filled .control {
+  border-color: var(--color-primitive-alpha-black-100);
+}
+
+.filled .input {
+  color: var(--color-primitive-gray-600);
+}
+
+.error .control {
+  border-width: 2px;
+  border-color: var(--color-primitive-red-400);
+}
+
+.error .labelText {
+  color: var(--color-primitive-red-600);
+}
+
+.disabled .control,
+.readonly .control {
+  background: var(--color-semantic-surface-secondary);
+  border-color: var(--color-primitive-alpha-black-50);
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.disabled .input {
+  cursor: not-allowed;
+  color: var(--color-primitive-gray-400);
+}
+
+.readonly .input {
+  color: var(--color-primitive-gray-600);
+}
+
+.split .control {
+  min-width: 160px;
+}
+
+.custom .control {
+  min-height: 44px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--color-primitive-primary-50);
+}
+
+.custom .container {
+  overflow: hidden;
+}

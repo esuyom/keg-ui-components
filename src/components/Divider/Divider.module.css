@@ -1,0 +1,22 @@
+.divider {
+  flex-shrink: 0;
+  background: var(--color-semantic-border-default);
+  width: 100%;
+}
+
+.horizontal {
+  width: 100%;
+}
+
+.vertical {
+  align-self: stretch;
+  height: auto;
+}
+
+.thin {
+  height: 1px;
+}
+
+.thick {
+  height: var(--spacing-8);
+}

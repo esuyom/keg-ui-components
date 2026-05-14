@@ -1,0 +1,33 @@
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  max-width: min(100%, 420px);
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-overlay);
+  color: var(--color-white);
+  font-family: var(--font-family-base);
+  box-shadow: 0 12px 28px rgba(16, 21, 34, 0.2);
+}
+
+.singleLine {
+  min-height: 44px;
+  padding: 0 var(--spacing-16);
+}
+
+.multiLine {
+  align-items: flex-start;
+  min-height: 60px;
+  padding: var(--spacing-12) var(--spacing-16);
+}
+
+.message {
+  min-width: 0;
+  font-size: var(--typography-14-semibold-font-size);
+  font-weight: var(--typography-14-semibold-font-weight);
+  line-height: var(--typography-14-semibold-line-height);
+}
+
+.slot {
+  margin-left: auto;
+}

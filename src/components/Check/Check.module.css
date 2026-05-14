@@ -1,0 +1,93 @@
+.check {
+  --check-size: 24px;
+  --check-icon-width: 17.25px;
+  --check-icon-height: 12px;
+  --check-stroke: var(--color-primitive-gray-200);
+  --check-fill: transparent;
+  --check-border: transparent;
+  --check-border-width: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--check-size);
+  height: var(--check-size);
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--check-size);
+  height: var(--check-size);
+  color: var(--check-stroke);
+  background: var(--check-fill);
+  border: var(--check-border-width) solid var(--check-border);
+  border-radius: var(--radius-full);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input:focus-visible + .control {
+  box-shadow: 0 0 0 4px var(--color-semantic-focus-ring-primary);
+}
+
+.input:disabled + .control {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.icon {
+  width: var(--check-icon-width);
+  height: var(--check-icon-height);
+}
+
+.size-sm {
+  --check-size: 16px;
+  --check-icon-width: 11.5px;
+  --check-icon-height: 8px;
+}
+
+.shape-circle {
+  --check-icon-width: 11.5px;
+  --check-icon-height: 8px;
+  --check-border: var(--color-primitive-gray-300);
+  --check-border-width: 1.5px;
+}
+
+.shape-circle.size-sm {
+  --check-icon-width: 7.188px;
+  --check-icon-height: 5px;
+  --check-border-width: 1px;
+}
+
+.input:checked + .control {
+  --check-stroke: var(--color-primitive-primary-500);
+}
+
+.shape-circle .input:checked + .control {
+  --check-fill: var(--color-primitive-primary-500);
+  --check-border: var(--color-primitive-primary-500);
+  --check-border-width: 0;
+  --check-stroke: var(--color-white);
+}
+
+.color-gray .input:checked + .control,
+.color-gray .control {
+  --check-stroke: var(--color-primitive-gray-500);
+}
+
+.color-gray.shape-circle .input:checked + .control {
+  --check-fill: var(--color-primitive-gray-700);
+  --check-border: var(--color-primitive-gray-700);
+  --check-stroke: var(--color-white);
+}

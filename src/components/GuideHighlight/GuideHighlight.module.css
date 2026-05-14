@@ -1,0 +1,51 @@
+.guideHighlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 180px;
+  padding: var(--spacing-24);
+}
+
+.dimSoft {
+  background: var(--color-primitive-alpha-black-400);
+}
+
+.dimMedium {
+  background: var(--color-primitive-alpha-black-600);
+}
+
+.dimStrong {
+  background: var(--color-primitive-alpha-black-800);
+}
+
+.noDim {
+  background: transparent;
+}
+
+.area {
+  width: 96px;
+  height: 96px;
+  background: var(--color-white);
+  box-shadow: 0 0 0 4px var(--color-semantic-focus-ring-primary);
+}
+
+.rectangle .area {
+  border-radius: var(--radius-none);
+}
+
+.rounded .area {
+  border-radius: var(--radius-lg);
+}
+
+.circle .area {
+  border-radius: var(--radius-full);
+}
+
+.highlightMedium .area {
+  box-shadow: 0 0 0 6px var(--color-semantic-focus-ring-primary);
+}
+
+.highlightStrong .area {
+  box-shadow: 0 0 0 8px var(--color-semantic-focus-ring-primary);
+}

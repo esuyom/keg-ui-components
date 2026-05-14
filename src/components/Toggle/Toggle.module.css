@@ -1,0 +1,40 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  width: 44px;
+  height: 26px;
+  padding: 3px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-primitive-gray-300);
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.toggle:focus-visible {
+  outline: 3px solid var(--color-semantic-focus-ring-primary);
+  outline-offset: 2px;
+}
+
+.toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  box-shadow: 0 1px 4px var(--color-primitive-alpha-black-200);
+  transform: translateX(0);
+  transition: transform 0.15s ease;
+}
+
+.on {
+  background: var(--color-primitive-primary-500);
+}
+
+.on .thumb {
+  transform: translateX(18px);
+}

@@ -1,0 +1,16 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 520px;
+  border-right: 1px solid var(--color-semantic-border-default);
+  background: var(--color-white);
+  font-family: var(--font-family-base);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--spacing-16);
+}

@@ -1,0 +1,42 @@
+.bottomCTA {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  width: 100%;
+  padding: var(--spacing-16) var(--spacing-20) calc(var(--spacing-16) + env(safe-area-inset-bottom, 0px));
+  background: var(--color-white);
+  font-family: var(--font-family-base);
+}
+
+.topFade::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -24px;
+  height: 24px;
+  background: linear-gradient(180deg, var(--color-white_a0), var(--color-white));
+  pointer-events: none;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.vertical .actions {
+  flex-direction: column-reverse;
+}
+
+.horizontal .actions {
+  flex-direction: row;
+}
+
+.supportingText {
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--typography-13-medium-font-size);
+  font-weight: var(--typography-13-medium-font-weight);
+  line-height: var(--typography-13-medium-line-height);
+  text-align: left;
+}

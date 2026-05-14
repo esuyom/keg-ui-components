@@ -1,0 +1,95 @@
+.asset {
+  --asset-size: 24px;
+  --asset-icon-size: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--asset-size);
+  height: var(--asset-size);
+  min-width: var(--asset-size);
+  min-height: var(--asset-size);
+  box-sizing: border-box;
+  color: var(--color-semantic-icon-secondary);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.custom {
+  width: var(--asset-size);
+  height: var(--asset-size);
+}
+
+.iconAtom,
+.imageAtom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.iconAtom {
+  width: var(--asset-icon-size);
+  height: var(--asset-icon-size);
+  color: inherit;
+}
+
+.iconAtom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.variant-icon {
+  padding: 5px;
+  background: var(--color-primitive-gray-100);
+}
+
+.variant-icon.size-md {
+  padding: 6px;
+}
+
+.variant-icon.size-lg {
+  padding: 8px;
+}
+
+.variant-image {
+  padding: 0;
+  background: var(--color-primitive-gray-100);
+}
+
+.noContainer {
+  padding: 0;
+  background: transparent;
+}
+
+.shape-circle {
+  border-radius: var(--radius-full);
+}
+
+.shape-rounded {
+  border-radius: var(--radius-sm);
+}
+
+.shape-rounded.size-md {
+  border-radius: var(--radius-md);
+}
+
+.shape-rounded.size-lg {
+  border-radius: 15px;
+}
+
+.shape-square {
+  border-radius: var(--radius-none);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}

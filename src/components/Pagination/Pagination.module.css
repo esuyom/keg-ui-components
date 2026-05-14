@@ -1,0 +1,55 @@
+.pagination {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  overflow-x: auto;
+  font-family: var(--font-family-base);
+}
+
+.page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--typography-13-semibold-font-size);
+  font-weight: var(--typography-13-semibold-font-weight);
+}
+
+.page:hover {
+  background: var(--color-primitive-alpha-black-50);
+}
+
+.current {
+  background: var(--color-primitive-primary-500);
+  color: var(--color-white);
+}
+
+.hintStart::before,
+.hintEnd::after,
+.hintBoth::before,
+.hintBoth::after {
+  content: '';
+  position: sticky;
+  z-index: 1;
+  width: 24px;
+  height: 32px;
+  flex: 0 0 24px;
+  pointer-events: none;
+}
+
+.hintStart::before,
+.hintBoth::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--color-white), var(--color-white_a0));
+}
+
+.hintEnd::after,
+.hintBoth::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--color-white), var(--color-white_a0));
+}

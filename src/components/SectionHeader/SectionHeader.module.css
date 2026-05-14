@@ -1,0 +1,33 @@
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-16);
+  width: 100%;
+  font-family: var(--font-family-base);
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  color: var(--color-semantic-text-primary);
+  font-size: var(--typography-18-bold-font-size);
+  font-weight: var(--typography-18-bold-font-weight);
+  line-height: var(--typography-18-bold-line-height);
+}
+
+.description {
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-13-medium-font-size);
+  font-weight: var(--typography-13-medium-font-weight);
+  line-height: var(--typography-13-medium-line-height);
+}
+
+.action {
+  flex-shrink: 0;
+}

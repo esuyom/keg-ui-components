@@ -1,0 +1,26 @@
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  padding: 0 var(--spacing-24);
+  font-family: var(--font-family-base);
+  font-size: var(--typography-14-bold-font-size);
+  font-weight: var(--typography-14-bold-font-weight);
+  line-height: var(--typography-14-bold-line-height);
+}
+
+.light {
+  color: var(--color-black);
+}
+
+.dark {
+  color: var(--color-white);
+  background: var(--color-black);
+}
+
+.indicators {
+  font-size: var(--typography-12-semibold-font-size);
+  font-weight: var(--typography-12-semibold-font-weight);
+}
