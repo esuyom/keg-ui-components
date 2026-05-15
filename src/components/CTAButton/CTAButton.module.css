@@ -1,4 +1,6 @@
 .button {
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +17,24 @@
   font-weight: var(--typography-18-bold-font-weight);
   line-height: var(--typography-18-bold-line-height);
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.button::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-primitive-alpha-black-50);
+  border-radius: inherit;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover:not(:disabled)::before,
+.button.pressed:not(:disabled)::before {
+  opacity: 1;
 }
 
 .size-lg {
@@ -59,19 +78,9 @@
   color: var(--color-white);
 }
 
-.primary:hover:not(:disabled),
-.primary.pressed {
-  background: var(--color-primitive-primary-600);
-}
-
 .danger {
   background: var(--color-primitive-red-600);
   color: var(--color-white);
-}
-
-.danger:hover:not(:disabled),
-.danger.pressed {
-  background: var(--color-primitive-red-700);
 }
 
 .secondary {
@@ -80,19 +89,9 @@
   font-weight: var(--typography-18-medium-font-weight);
 }
 
-.secondary:hover:not(:disabled),
-.secondary.pressed {
-  background: var(--color-primitive-gray-200);
-}
-
 .text {
   background: transparent;
   color: var(--color-primitive-primary-500);
-}
-
-.text:hover:not(:disabled),
-.text.pressed {
-  background: var(--color-primitive-primary-50);
 }
 
 .custom {
@@ -100,16 +99,13 @@
   color: var(--color-primitive-primary-500);
 }
 
-.custom:hover:not(:disabled),
-.custom.pressed {
-  background: var(--color-primitive-gray-100);
-}
-
 .button:disabled:not(.loading) {
-  opacity: 0.45;
+  opacity: 0.5;
 }
 
 .icon {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -117,6 +113,8 @@
 }
 
 .label {
+  position: relative;
+  z-index: 1;
   min-width: 0;
   overflow: hidden;
   text-align: center;
@@ -125,6 +123,8 @@
 }
 
 .spinner {
+  position: relative;
+  z-index: 1;
   width: 18px;
   height: 18px;
   border: 2px solid currentColor;

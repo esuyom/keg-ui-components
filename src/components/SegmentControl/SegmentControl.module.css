@@ -40,7 +40,7 @@
 }
 
 .selected {
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   color: var(--color-primitive-primary-500);
   box-shadow: 0 1px 4px var(--color-primitive-alpha-black-100);
 }

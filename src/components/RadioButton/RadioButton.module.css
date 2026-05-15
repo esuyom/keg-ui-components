@@ -28,7 +28,7 @@
   height: 22px;
   border: 2px solid var(--color-primitive-gray-300);
   border-radius: var(--radius-full);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   box-sizing: border-box;
   flex-shrink: 0;
 }

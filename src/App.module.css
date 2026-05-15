@@ -1,7 +1,12 @@
 .layout {
+  --app-hover-bg: var(--color-primitive-alpha-black-50);
+  --app-sample-bg: var(--color-semantic-surface-primary);
+
   display: flex;
   min-height: 100vh;
   font-family: var(--font-family-base);
+  background: var(--color-semantic-surface-secondary);
+  color: var(--color-semantic-text-primary);
 }
 
 .lnb {
@@ -12,8 +17,40 @@
   flex-shrink: 0;
   overflow-y: auto;
   border-right: 1px solid var(--color-semantic-border-default);
-  background: var(--color-primitive-gray-50);
+  background: var(--color-semantic-surface-primary);
   padding: var(--spacing-24) 0;
+}
+
+.themeSwitch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  margin: 0 var(--spacing-12) var(--spacing-20);
+  padding: 3px;
+  border: 1px solid var(--color-semantic-border-default);
+  border-radius: var(--radius-sm);
+  background: var(--color-semantic-surface-secondary);
+}
+
+.themeButton {
+  min-height: 30px;
+  border-radius: calc(var(--radius-sm) - 3px);
+  color: var(--color-semantic-text-tertiary);
+  font-size: var(--typography-12-semibold-font-size);
+  font-weight: var(--typography-12-semibold-font-weight);
+  line-height: var(--typography-12-semibold-line-height);
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.themeButton:hover {
+  background: var(--app-hover-bg);
+  color: var(--color-semantic-text-primary);
+}
+
+.themeButtonActive {
+  background: var(--color-semantic-surface-primary);
+  color: var(--color-semantic-text-primary);
+  box-shadow: 0 1px 4px var(--color-primitive-alpha-black-100);
 }
 
 .lnbTitle {
@@ -48,7 +85,7 @@
 }
 
 .lnbItem:hover {
-  background: var(--color-primitive-alpha-black-50);
+  background: var(--app-hover-bg);
   color: var(--color-semantic-text-primary);
 }
 
@@ -128,7 +165,7 @@
   min-height: 96px;
   border: 1px solid var(--color-semantic-border-default);
   border-radius: var(--radius-md);
-  background: var(--color-white);
+  background: var(--app-sample-bg);
 }
 
 .sampleLabel {
@@ -171,7 +208,7 @@
   overflow: hidden;
   border: 1px solid var(--color-semantic-border-default);
   border-radius: var(--radius-lg);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
 }
 
 .bottomSheetSamples {
@@ -208,7 +245,7 @@
   align-items: center;
   justify-content: center;
   min-height: 96px;
-  background: var(--color-primitive-gray-50);
+  background: var(--color-semantic-surface-secondary);
   color: var(--color-semantic-text-secondary);
 }
 
@@ -218,7 +255,7 @@
   height: 180px;
   overflow: hidden;
   border-radius: var(--radius-md);
-  background: var(--color-primitive-gray-100);
+  background: var(--color-semantic-surface-elevated);
 }
 
 @media (max-width: 860px) {

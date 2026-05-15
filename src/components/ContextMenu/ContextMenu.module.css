@@ -3,7 +3,7 @@
   overflow: hidden;
   border: 1px solid var(--color-primitive-gray-50);
   border-radius: var(--radius-md);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   box-shadow:
     0 2px 30px var(--color-primitive-alpha-black-50),
     0 4px 60px var(--color-primitive-alpha-black-50);

@@ -11,7 +11,7 @@
 }
 
 .background {
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
 }
 
 .leftSlot,

@@ -7,7 +7,7 @@
   padding: 0 var(--spacing-12);
   border: 1px solid var(--color-semantic-border-default);
   border-radius: var(--radius-full);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   color: var(--color-semantic-icon-secondary);
   font-family: var(--font-family-base);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;

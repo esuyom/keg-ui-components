@@ -144,6 +144,20 @@ const compositionMap: Record<string, { name: string; id: string }[]> = {
 const sampleAssetImage =
   'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><rect width="80" height="80" fill="%23D2D4EB"/><circle cx="28" cy="26" r="14" fill="%23FFFFFF" opacity="0.85"/><path d="M8 70L32 42L46 56L56 45L74 70H8Z" fill="%232B2D55"/></svg>';
 
+type ThemeMode = 'light' | 'dark';
+
+const themeOptions: { label: string; value: ThemeMode }[] = [
+  { label: 'Light', value: 'light' },
+  { label: 'Dark', value: 'dark' },
+];
+
+const getInitialTheme = (): ThemeMode => {
+  const savedTheme = window.localStorage.getItem('keg-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
 const Section = ({ id, title, children }: { id: string; title: string; children: ReactNode }) => {
   const compositions = compositionMap[id];
 
@@ -183,10 +197,18 @@ const Sample = ({ label, children }: { label: string; children: ReactNode }) => 
 export default function App() {
   const [activeId, setActiveId] = useState(components[0].id);
   const [bottomTabIndex, setBottomTabIndex] = useState(0);
+  const [theme, setTheme] = useState<ThemeMode>(getInitialTheme);
 
   const handleNavClick = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  useEffect(() => {
+    // html에 테마 값을 올려 전역 CSS 변수와 브라우저 기본 UI 색상을 함께 바꿔요.
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    window.localStorage.setItem('keg-theme', theme);
+  }, [theme]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -208,6 +230,19 @@ export default function App() {
   return (
     <div className={styles.layout}>
       <nav className={styles.lnb}>
+        <div className={styles.themeSwitch} role="group" aria-label="Theme mode">
+          {themeOptions.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              className={[styles.themeButton, theme === option.value ? styles.themeButtonActive : ''].filter(Boolean).join(' ')}
+              aria-pressed={theme === option.value}
+              onClick={() => setTheme(option.value)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
         <p className={styles.lnbTitle}>Components</p>
         <ul className={styles.lnbList}>
           {components.map(({ name, id }) => (
@@ -263,16 +298,20 @@ export default function App() {
             <Badge color="yellow" emphasis="soft">Yellow</Badge>
             <Badge color="red" emphasis="solid">Red</Badge>
             <Badge color="red" emphasis="soft">Red</Badge>
+            <Badge color="gray" emphasis="solid">Gray</Badge>
+            <Badge color="gray" emphasis="soft">Gray</Badge>
             <Badge size="sm" color="gray">Small</Badge>
           </div>
         </Section>
 
         <Section id="bottom-cta" title="BottomCTA">
+        <div className={styles.bottomSheetSamples}>
           <div className={styles.phoneSurface}>
             <BottomCTA layout={'vertical'} supportingText="변경 내용을 저장할까요?" />
           </div>
           <div className={styles.phoneSurface}>
             <BottomCTA layout={'horizontal'}/>
+          </div>
           </div>
         </Section>
 
@@ -382,6 +421,7 @@ export default function App() {
           <div className={styles.inlineWrap}>
             <CTAButton>버튼</CTAButton>
             <CTAButton variant="danger">버튼</CTAButton>
+            <CTAButton variant="danger" disabled>버튼</CTAButton>
             <CTAButton variant="secondary">버튼</CTAButton>
             <CTAButton variant="text">버튼</CTAButton>
             <CTAButton variant="custom">버튼</CTAButton>

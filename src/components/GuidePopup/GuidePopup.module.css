@@ -18,7 +18,7 @@
   width: min(100%, 320px);
   padding: var(--spacing-20);
   border-radius: var(--radius-lg);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   font-family: var(--font-family-base);
   box-shadow: 0 16px 40px rgba(16, 21, 34, 0.18);
 }

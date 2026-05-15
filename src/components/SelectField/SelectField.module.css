@@ -24,7 +24,7 @@
   padding: 0 var(--spacing-16);
   border: 1px solid var(--color-semantic-border-default);
   border-radius: var(--radius-md);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   color: var(--color-semantic-text-primary);
   text-align: left;
 }
@@ -65,7 +65,7 @@
   padding: var(--spacing-8);
   border: 1px solid var(--color-semantic-border-default);
   border-radius: var(--radius-md);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   box-shadow: 0 10px 24px rgba(16, 21, 34, 0.12);
 }
 

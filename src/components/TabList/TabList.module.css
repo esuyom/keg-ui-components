@@ -61,10 +61,10 @@
 
 .leadingHint::before {
   left: 0;
-  background: linear-gradient(90deg, var(--color-white), var(--color-white_a0));
+  background: linear-gradient(90deg, var(--color-semantic-surface-primary), var(--color-semantic-surface-primary_a0));
 }
 
 .trailingHint::after {
   right: 0;
-  background: linear-gradient(270deg, var(--color-white), var(--color-white_a0));
+  background: linear-gradient(270deg, var(--color-semantic-surface-primary), var(--color-semantic-surface-primary_a0));
 }

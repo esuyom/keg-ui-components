@@ -12,7 +12,7 @@
 .key {
   min-height: 36px;
   border-radius: var(--radius-sm);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   color: var(--color-semantic-text-primary);
   font-size: var(--typography-13-semibold-font-size);
   font-weight: var(--typography-13-semibold-font-weight);

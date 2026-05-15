@@ -21,7 +21,7 @@
 .attached {
   border-style: solid;
   border-color: var(--color-semantic-border-default);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
 }
 
 .disabled {

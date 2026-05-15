@@ -6,7 +6,7 @@
   gap: var(--spacing-12);
   border-radius: var(--radius-md);
   color: var(--color-semantic-text-primary);
-  background: var(--color-white);
+  background: var(--color-semantic-surface-primary);
   font-family: var(--font-family-base);
   text-align: left;
 }
